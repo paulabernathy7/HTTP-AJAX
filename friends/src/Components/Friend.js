@@ -4,11 +4,20 @@ import App from "../App";
 
 const Friend = props => {
   return (
-    <div>
-      <p>{props.friend.name}</p>
-      <p>{props.friend.age}</p>
-      <p>{props.friend.email}</p>
-    </div>
+    <container>
+      <div>
+        <p>Name: {props.friend.name}</p>
+        <p>Age: {props.friend.age}</p>
+        <p>Email: {props.friend.email}</p>
+      </div>
+      <form>
+        <label>
+          New Friend:
+          <input type="text" friend="friend" />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    </container>
   );
 };
 
