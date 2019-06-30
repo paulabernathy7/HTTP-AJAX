@@ -10,13 +10,6 @@ const Friend = props => {
         <p>Age: {props.friend.age}</p>
         <p>Email: {props.friend.email}</p>
       </div>
-      <form>
-        <label>
-          New Friend:
-          <input type="text" friend="friend" />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
     </container>
   );
 };

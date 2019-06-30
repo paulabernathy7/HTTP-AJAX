@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
 import Friend from "./Components/Friend";
+import Form from "./Components/Form";
 import "./App.css";
 
 class App extends React.Component {
@@ -23,6 +24,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Form />
         {this.state.friends.map(item => {
           return <Friend friend={item} />;
         })}
