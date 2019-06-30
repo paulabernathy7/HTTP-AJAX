@@ -21,14 +21,20 @@ class Form extends React.Component {
     e.preventDefault();
     //destructing the state below
     // created new object called newFriend
+    //passed down function as props from app
     const { name, age, email } = this.state;
     const newFriend = { name, age, email };
     axios
       .post("http://localhost:5000/friends", newFriend)
       .then(response => {
-        console.log(response.data);
+        this.props.addFriend(response.data);
       })
-      .catch(err => {});
+      .catch(err => console.log(err));
+    this.setState({
+      name: "",
+      age: "",
+      email: ""
+    });
   };
 
   render() {

@@ -21,10 +21,12 @@ class App extends React.Component {
       .catch(err => {});
   }
 
+  addFriend = data => this.setState({ friends: data }); // sets data to state
+
   render() {
     return (
       <div>
-        <Form />
+        <Form addFriend={this.addFriend} />
         {this.state.friends.map(item => {
           return <Friend friend={item} />;
         })}
