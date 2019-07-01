@@ -21,7 +21,7 @@ class App extends React.Component {
       .catch(err => {});
   }
 
-  addFriend = data => this.setState({ friends: data }); // sets data to state
+  addFriend = data => this.setState({ friends: data }); // function that sets data to state
 
   render() {
     return (
